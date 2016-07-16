@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yobradev.bmicalc"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.yo_devs.bmicalc.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yo_devs.bmicalc.RatioActivity"
+            android:label="@string/title_activity_ratio"
+            android:parentActivityName="com.yo_devs.bmicalc.MainActivity" >
+        </activity>
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:name="com.yo_devs.bmicalc.WebActivity"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_web"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.yo_devs.bmicalc.HealthActivity"
+            android:label="@string/title_activity_health"
+            android:parentActivityName="com.yo_devs.bmicalc.MainActivity" >
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Holo.Dialog"
+            android:name="com.yo_devs.bmicalc.AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
+    </application>
+
+</manifest>
